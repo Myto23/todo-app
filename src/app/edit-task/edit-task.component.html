@@ -1,0 +1,31 @@
+<div class="edit-task-container">
+  <h2>Editar Tarea</h2>
+  <div class="form-group">
+    <label for="taskId">ID de Tarea:</label>
+    <input type="number" class="form-control" id="taskId" [(ngModel)]="taskId" name="taskId">
+    <button type="button" class="btn btn-primary" (click)="searchTask()">Consultar</button>
+  </div>
+  <form *ngIf="task" class="edit-task-form" (ngSubmit)="updateTask()">
+    <div class="form-group">
+      <label for="descripcion">Descripción:</label>
+      <textarea class="form-control" id="descripcion" [(ngModel)]="task.descripcion" name="descripcion" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="fecha">Fecha:</label>
+      <input type="date" class="form-control" id="fecha" [(ngModel)]="task.fecha" name="fecha" required>
+    </div>
+    <div class="form-group">
+      <label for="usuarioNombre">Nombre del Usuario:</label>
+      <input type="text" class="form-control" id="usuarioNombre" [(ngModel)]="task.usuario.nombre" name="usuarioNombre" required>
+    </div>
+    <div class="form-group">
+      <label for="usuarioEmail">Email del Usuario:</label>
+      <input type="email" class="form-control" id="usuarioEmail" [(ngModel)]="task.usuario.email" name="usuarioEmail" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+  </form>
+  <!-- Mostrar mensaje de éxito -->
+  <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+  <!-- Mostrar mensaje de error -->
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>

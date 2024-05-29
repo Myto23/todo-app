@@ -1,0 +1,18 @@
+<!-- task-list.component.html -->
+<div class="task-list-container">
+  <h2>Lista de Tareas</h2>
+  <ul class="task-list">
+    <li *ngFor="let task of tasks" class="task-item">
+      <span class="task-info">
+        <strong>ID:</strong> {{ task.usuario.id }}<br>
+        <strong>Usuario:</strong> {{ task.usuario.nombre }}<br>
+        <strong>Email:</strong> {{ task.usuario.email }}<br>
+        <strong>Descripción de la tarea:</strong> {{ task.descripcion }}<br>
+        <strong>Fecha:</strong> {{ formatDate(task.fecha) }}
+      </span>
+      <br>
+      <br>
+      <button class="delete-button" (click)="deleteTask(task.id)">Eliminar</button>
+    </li>
+  </ul>
+</div>

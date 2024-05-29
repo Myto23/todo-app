@@ -1,0 +1,65 @@
+/* Estilos para el contenedor principal del componente */
+.edit-task-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para el formulario de edición */
+.edit-task-form {
+  margin-bottom: 20px;
+}
+
+.edit-task-form label {
+  font-weight: bold;
+}
+
+.edit-task-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-task-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.edit-task-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los mensajes de error */
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Espacio entre cada grupo de formulario */
+}
+
+label {
+  display: block; /* Para que cada etiqueta esté en una línea separada */
+  font-weight: bold; /* Hace que el texto de la etiqueta sea más destacado */
+}
+
+textarea {
+  width: 100%; /* Ocupar todo el ancho disponible */
+  padding: 10px; /* Espacio interno */
+  font-size: 16px; /* Tamaño del texto */
+  border: 1px solid #ccc; /* Borde del área de texto */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+textarea:focus {
+  border-color: #007bff; /* Cambia el color del borde cuando el área de texto está enfocada */
+  outline: none; /* Elimina el contorno predeterminado */
+}
